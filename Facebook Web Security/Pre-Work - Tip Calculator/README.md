@@ -33,7 +33,9 @@ The following **additional** features are implemented:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-    My main challenges were primarily in writing cleaner and more concise code since, in certain situations, I didn't know how I could condense or modularize some code without messing up the scopes of the variables. Another aspect that I struggled with was design based (i.e CSS). There are some additional features that I would've like to have added to improve the web app's UI and UX.
+* My main challenges were primarily in writing cleaner and more concise code since, in certain situations, I didn't know how I could condense or modularize some code without messing up the scopes of the variables. 
+* Another aspect that I struggled with was design based (i.e CSS). 
+* There are some additional features that I would've like to have added to improve the web app's UI and UX.
 
 ## License
 
