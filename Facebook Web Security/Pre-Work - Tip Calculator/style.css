@@ -5,7 +5,6 @@
 }
 
 #titleBorder {
-     /*border: 1px solid black;*/
      text-align: center;
      height: auto;
      width: auto;
@@ -14,14 +13,12 @@
 }
 
 #formBorder {
-     /*border: 1px solid red;*/
      text-align: center;
      height:auto;
      width: auto;
 }
 
 #subtotalBorder {
-     /*border: 1px dashed blue;*/
      text-align: center;
      height:auto;
      width: auto;
@@ -34,7 +31,6 @@
 }
 
 #tipBorder {
-     /*border: 1px dotted brown;*/
      text-align: left;
      height:auto;
      width: auto;
@@ -47,7 +43,6 @@
 }
 
 #splitBorder {
-     /*border: 1px solid orange;*/
      text-align: center;
      height:auto;
      width: auto;
@@ -59,7 +54,6 @@
 }
 
 #submitBorder {
-     /*border: 1px dotted green;*/
      text-align: center;
      height:auto;
      width: auto;
@@ -69,7 +63,6 @@
 }
 
 .resultBorder {
-     /*border: 1px solid purple;*/
      height:auto;
      align-content: center;
      position: absolute;
