@@ -30,7 +30,7 @@
                             if($percent == $value){
                                  echo 'checked';
                             }
-                       echo ' > <span class="fixedPercents">' . $value . '%</span>';
+                       echo '><span class="fixedPercents">' . $value . '%</span>';
                   }
                   echo '<br><input type="radio" name="percentField" id="customButton" class="radioButtons">';
               }
@@ -44,7 +44,7 @@
                                  if($_POST['percentField'] == $value){
                                       echo 'checked';
                                  }
-                            echo ' > <span class="fixedPercents">' . $value . '%</span>';
+                            echo '><span class="fixedPercents">' . $value . '%</span>';
                        }
                        echo '<br><input type="radio" name="percentField" id="customButton" class="radioButtons">';
                    }
@@ -96,39 +96,45 @@
 
          <body id="background">
 
+              <div id="titleBorder" class="readableText">
+                   Tip Calculator
+              </div>
+
               <div id="formBorder">
                    <!-- Form for Tip Calculator -->
                    <form  method="post" target="" class="pure-form">
 
-                        <div id="titleBorder" class="readableText">
-                             Tip Calculator
-                        </div>
-
                          <div id="subtotalBorder" class="pure-u-8-24">
                                    <!-- Bill Subtotal & Error Message -->
-                                  <span class="subtotalError">
+                                  <span class="subtotalError readableText">
                                        *Bill Subtotal:
                                   </span>
 
                                   <input type="text" name="subtotalField" placeholder="Bill Subtotal ($)"value="<?php if(isset($_POST['subtotalField'])){print $_POST['subtotalField'];}else{print "";} ?>">
+                         </div>
 
                                                  <!--Form Validation for the subtotal-->
                                                  <?php
-                                                      if($_POST){
+                                                     if(!$_POST){
+                                                             echo '<br>';
+                                                     }
+                                                     else if($_POST){
                                                            if(empty($_POST["subtotalField"]) || $_POST["subtotalField"] < 0 || !is_numeric($_POST["subtotalField"])){
                                                                 echo '<style>
                                                                       .subtotalError{
-                                                                           color: #FF0000;
+                                                                           color: #D92026;
                                                                       }
                                                                 </style>';
+                                                                echo '<span class="subtotalError">' . "Invalid Subtotal" . '</span>';
                                                            }
                                                            else{
                                                                 $subtotal = $_POST["subtotalField"];
                                                                 $subtotalValid = true;
+                                                                echo '<br>';
                                                            }
                                                       }
                                                  ?>
-                         </div>
+
 
                          <div id="tipBorder">
                                   <!--Tip Percentage & Error Message-->
@@ -141,7 +147,8 @@
                                              radioButtons($percentTip);
                                   ?>
 
-                                  <span class="customError">Custom: </span><input type="text" placeholder="Custom Tip (%)"name="customInput" id="customText" value="<?php if($_POST){if(isset($_POST['customInput'])&&($_POST['customInput']!="")&&($_POST["percentField"]!=10&&$_POST["percentField"]!=15&&$_POST["percentField"]!=20)){echo $_POST['customInput'];}}?>">
+                                  <span class="customError readableText">Custom: </span><input type="text" placeholder="Custom Tip (%)"name="customInput" id="customText" value="<?php if($_POST){if(isset($_POST['customInput'])&&($_POST['customInput']!="")&&($_POST["percentField"]!=10&&$_POST["percentField"]!=15&&$_POST["percentField"]!=20)){echo $_POST['customInput'];}}?>">
+                         </div>
 
                                   <!--Javascript that makes the custom radio button selected if the textbox is active; Allows user to type into box without having click button every time-->
                                   <script>
@@ -154,11 +161,15 @@
 
                                   <!--Form Validation for the percentField-->
                                   <?php
-                                            if($_POST){
+                                             if(!$_POST){
+                                                  echo '<br>';
+                                             }
+                                            else if($_POST){
                                                       //If one of the fixedTip options is chosen
                                                       if(($_POST["percentField"] == 10 || $_POST["percentField"] == 15 || $_POST["percentField"] == 20)){
                                                            $percentTip = $_POST["percentField"];
                                                            $percentValid = true;
+                                                           echo '<br>';
                                                       }
                                                       //If the customTip option is chosen
                                                       else{
@@ -167,49 +178,56 @@
                                                                 if($customTip <= 0 || !is_numeric($_POST["customInput"])){
                                                                      echo '<style>
                                                                           .customError{
-                                                                               color: #FF0000;
+                                                                               color: #D92026;
                                                                           }
                                                                     </style>';
+                                                                    echo '<span class="customError">' . "Invalid Custom Tip" . '</span>';
                                                                }
                                                                else{
                                                                     $percentTip = $customTip;
                                                                     $percentValid = true;
+                                                                    echo '<br>';
                                                                }
                                                       }
                                             }
                                   ?>
-                         </div>
+
 
                          <div id="splitBorder" class="pure-u-8-24">
                                   <!--Split Amongst & Error Message-->
-                                  <span class="splitError">
+                                  <span class="splitError readableText">
                                        Split amongst:
                                   </span>
 
                                   <!--Box for Splitting Input-->
                                   <input type="text" name="numOfPeople" id="splitBox" value="<?php if(!isset($_POST['numOfPeople'])){echo "1";}if($_POST){if(isset($_POST['numOfPeople'])){echo$_POST['numOfPeople'];}else{echo"1";}}?>">
 
-                                  <span class="splitError">
+                                  <span class="splitError readableText">
                                        person(s)
                                   </span>
-
+                         </div>
                                   <!--Form Validation for the split text box input-->
                                   <?php
-                                        if($_POST){
-                                             if(empty($_POST['numOfPeople']) || $_POST['numOfPeople'] < 1 || !is_numeric($_POST['numOfPeople'])){
+                                        if(!$_POST){
+                                             echo '<br>';
+                                        }
+                                        else if($_POST){
+                                             if(empty($_POST['numOfPeople']) || $_POST['numOfPeople'] < 1 || !is_numeric($_POST['numOfPeople']) || preg_match("/\./",$_POST['numOfPeople'])){
                                                   echo '<style>
                                                         .splitError{
-                                                             color: #FF0000;
+                                                             color: #D92026;
                                                         }
                                                   </style>';
+                                                  echo '<span class="splitError">' . "Invalid Split" . '</span>';
                                              }
                                              else{
                                                   $numOfPeople = $_POST['numOfPeople'];
                                                   $splitValid = true;
+                                                  echo '<br>';
                                              }
                                         }
                                   ?>
-                         </div>
+
 
                          <div id="submitBorder">
                                   <!--Submit Button-->

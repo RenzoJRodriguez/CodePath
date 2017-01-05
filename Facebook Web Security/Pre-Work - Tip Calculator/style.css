@@ -1,5 +1,5 @@
 #background{
-     background-color: #0641a0;
+     background-color: #0a0a0a;
      width: 100%;
      height: 100%;
 }
@@ -9,7 +9,7 @@
      height: auto;
      width: auto;
 
-     background-color: #032152;
+     background-color: #000000;
 }
 
 #formBorder {
@@ -22,35 +22,27 @@
      text-align: center;
      height:auto;
      width: auto;
-
-     padding-top: 20px;
-     padding-bottom: 10px;
-
      display: block;
-     margin-right: 90px;
+     margin-right: 120px;
+     padding-top: 30px;
 }
 
 #tipBorder {
-     text-align: left;
+     text-align: center;
      height:auto;
      width: auto;
-
-     padding-top: 20px;
-     padding-bottom: 10px;
-
-     display: inline-block;
-     margin-right: 60px;
+     display: block;
+     margin-right: 65px;
+     padding-top: 5px;
 }
 
 #splitBorder {
      text-align: center;
      height:auto;
      width: auto;
-
-     padding-top: 20px;
-     padding-bottom: 10px;
-
      display: block;
+     margin-right: 30px;
+     padding-top: 15px;
 }
 
 #submitBorder {
@@ -58,8 +50,8 @@
      height:auto;
      width: auto;
 
-     padding-top: 20px;
-     padding-bottom: 20px;
+     padding-top: 10px;
+     padding-bottom: 10px;
 }
 
 .resultBorder {
@@ -76,7 +68,7 @@
      width: 6em;
 
      padding-left: 11px;
-     background-color: rgb(28, 184, 65);
+     background-color: #009925;
 }
 
 .radioButtons {
@@ -85,30 +77,32 @@
 }
 
 .fixedPercents{
-     color: orange;
+     color: #FFA000;
      font-size: 2em;
 
-     margin-right: 10px;
+     padding-left: 5px;
+     margin-right: 35px;
 }
 
 .subtotalError{
-     color: orange;
-     font-size: 1.5em;
+     color: #FFA000;
 }
 
 .customError{
-     color: orange;
-     font-size: 1.5em;
+     color: #FFA000;
 }
 
 .splitError{
-     color: orange;
-     font-size: 1.5em;
+     color: #FFA000;
 }
 
 .readableText {
-     color: orange;
-     font-size: 1.6em;
+     color: #FFA000;
+     font-size: 1.5em;
+}
+
+#customText{
+     margin-right: 30px;
 }
 
 * {
