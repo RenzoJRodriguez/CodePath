@@ -1,0 +1,123 @@
+#background{
+     background-color: #0641a0;
+     width: 100%;
+     height: 100%;
+}
+
+#titleBorder {
+     /*border: 1px solid black;*/
+     text-align: center;
+     height: auto;
+     width: auto;
+
+     background-color: #032152;
+}
+
+#formBorder {
+     /*border: 1px solid red;*/
+     text-align: center;
+     height:auto;
+     width: auto;
+}
+
+#subtotalBorder {
+     /*border: 1px dashed blue;*/
+     text-align: center;
+     height:auto;
+     width: auto;
+
+     padding-top: 20px;
+     padding-bottom: 10px;
+
+     display: block;
+     margin-right: 90px;
+}
+
+#tipBorder {
+     /*border: 1px dotted brown;*/
+     text-align: left;
+     height:auto;
+     width: auto;
+
+     padding-top: 20px;
+     padding-bottom: 10px;
+
+     display: inline-block;
+     margin-right: 60px;
+}
+
+#splitBorder {
+     /*border: 1px solid orange;*/
+     text-align: center;
+     height:auto;
+     width: auto;
+
+     padding-top: 20px;
+     padding-bottom: 10px;
+
+     display: block;
+}
+
+#submitBorder {
+     /*border: 1px dotted green;*/
+     text-align: center;
+     height:auto;
+     width: auto;
+
+     padding-top: 20px;
+     padding-bottom: 20px;
+}
+
+.resultBorder {
+     /*border: 1px solid purple;*/
+     height:auto;
+     align-content: center;
+     position: absolute;
+     left: 50%;
+     padding-left: 10px;
+    margin-left: -60px;
+}
+
+#submitButton {
+     height: 3em;
+     width: 6em;
+
+     padding-left: 11px;
+     background-color: rgb(28, 184, 65);
+}
+
+.radioButtons {
+     height: 25px;
+     width: 25px;
+}
+
+.fixedPercents{
+     color: orange;
+     font-size: 2em;
+
+     margin-right: 10px;
+}
+
+.subtotalError{
+     color: orange;
+     font-size: 1.5em;
+}
+
+.customError{
+     color: orange;
+     font-size: 1.5em;
+}
+
+.splitError{
+     color: orange;
+     font-size: 1.5em;
+}
+
+.readableText {
+     color: orange;
+     font-size: 1.6em;
+}
+
+* {
+     font-family: 'Baloo Thambi', cursive;
+}
