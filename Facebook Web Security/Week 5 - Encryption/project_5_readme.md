@@ -61,7 +61,9 @@ The following **required** functionality is completed:
     Email 5: Let me know before you go inside. I'll create a distraction. - Austin
     Email 6: Let me know before you go inside. I'll create a distraction. - Natasha
   
-  * [X]  Required: Identify the double agent: Natasha is the double agent. 
+  * [X]  Required: Identify the double agent
+  
+    Response: Natasha is the double agent. 
   
     Reason: The public key for "friend" worked on email #6 but not on email #5 (Dark Shadows' public key worked on that one). Dark Shadow forged email #5 to make it seem like Austin was working with them and not Natasha.
 
