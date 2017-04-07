@@ -1,4 +1,6 @@
-# Project 7 - Pentesting Live Targets
+# Project 8 - Pentesting Live Targets
+
+Time spent: **12** hours spent in total
 
 ## Pentesting Report
 
